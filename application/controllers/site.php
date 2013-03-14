@@ -7,9 +7,9 @@ class Site extends CI_Controller{
 		
 		//display data
 		
-		$this->load->model('user_model');
+		$this->load->model('data_model');
 		
-		$data['rows'] = $this->user_model->get_all_users();
+		$data['rows'] = $this->data_model->getUserInfo();
 		
 		$this->load->view('members_area', $data);
 		
@@ -27,6 +27,6 @@ class Site extends CI_Controller{
 		}
 		
 	}
-	
 	*/
+	
 }
