@@ -5,7 +5,14 @@ class Site extends CI_Controller{
 
 	function members_area(){
 		
-		$this->load->view('members_area');
+		//display data
+		
+		$this->load->model('user_model');
+		
+		$data['rows'] = $this->user_model->get_all_users();
+		
+		$this->load->view('members_area', $data);
+		
 		
 	}
 	
