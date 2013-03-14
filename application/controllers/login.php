@@ -11,7 +11,6 @@ class Login extends CI_Controller{
 	}
 	
 	//user validation
-	
 	function validate_credentials(){
 		
 		$this->load->model('membership_model');
@@ -51,6 +50,7 @@ class Login extends CI_Controller{
 		
 	}
 	
+	//Add a new member
 	function create_member(){
 		
 		$this->load->library('form_validation');
@@ -66,6 +66,7 @@ class Login extends CI_Controller{
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
 		
 		$this->form_validation->set_rules('password2', 'Password Confirmation', 'trim|required|matches[password]');
+		
 		
 		//if return false, load view again
 		if($this->form_validation->run() == FALSE){
