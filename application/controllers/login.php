@@ -56,6 +56,7 @@ class Login extends CI_Controller{
 		$this->load->library('form_validation');
 		//name, error msg, and validation rules
 		
+		//validate person info
 		$this->form_validation->set_rules('first_name', 'Name', 'trim|required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
 		$this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|valid_email');

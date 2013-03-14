@@ -2,18 +2,14 @@
 
 class Site extends CI_Controller{
 	
-	
-	function __construct(){
-		parent::Controller();
-		$this->is_logged_in();
-	}
-	
+
 	function members_area(){
 		
 		$this->load->view('members_area');
 		
 	}
 	
+	/*
 	function is_logged_in(){
 		
 		$is_logged_in = $this->session->userdata('is_logged_in');
@@ -25,5 +21,5 @@ class Site extends CI_Controller{
 		
 	}
 	
-	
+	*/
 }
